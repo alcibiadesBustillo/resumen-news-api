@@ -161,5 +161,7 @@ REST_FRAMEWORK = {
 
 SWAGGER_SETTINGS = {    
     'VALIDATOR_URL': 'http://localhost:8000',
-    'DEFAULT_AUTO_SCHEMA_CLASS': 'drf_yasg_examples.SwaggerAutoSchema',  
+    'DEFAULT_AUTO_SCHEMA_CLASS': 'drf_yasg_examples.SwaggerAutoSchema',
+    'LOGIN_URL': 'rest_framework:login',
+    'LOGOUT_URL': 'rest_framework:logout',
 }
