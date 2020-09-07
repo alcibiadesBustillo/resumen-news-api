@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'rest_auth',
     'rest_auth.registration',
+    'drf_yasg',
 
     
     # local apps
@@ -59,18 +60,6 @@ INSTALLED_APPS = [
 # IsAuthenticatedOrReadOnly - unauthorized users can view any page, but only
 #                             authenticated users have write, edit, or delete privileges
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
-    
-    'DEFAULT_AUTHENTICATION_CLASSES': [ # new
-        'rest_framework.authentication.SessionAuthentication',
-        #'rest_framework.authentication.BasicAuthentication', #Default authrntication
-        'rest_framework.authentication.TokenAuthentication',
-    ],
-
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -155,3 +144,22 @@ STATIC_URL = '/static/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # new
 
 SITE_ID = 1 # new
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': [ # new
+        'rest_framework.authentication.SessionAuthentication',
+        #'rest_framework.authentication.BasicAuthentication', #Default authrntication
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.coreapi.AutoSchema'
+
+}
+
+SWAGGER_SETTINGS = {    
+    'VALIDATOR_URL': 'http://localhost:8000',
+    'DEFAULT_AUTO_SCHEMA_CLASS': 'drf_yasg_examples.SwaggerAutoSchema',  
+}

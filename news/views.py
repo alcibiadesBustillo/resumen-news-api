@@ -37,6 +37,16 @@ class NewsViewSet(viewsets.ModelViewSet):
     serializer_class = NewsSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
+    """
+    retrieve:
+    Return the given user.
+
+    list:
+    Return a list of all the existing users.
+
+    create:
+    Create a new user instance.
+    """
     #permission_classes = (IsAuthorOrReadOnly,)
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
