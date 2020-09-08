@@ -1,7 +1,16 @@
-# resumen-news
+# Resumen  News API
 Resume News API using web scraping and the full set of Django REST Framework features.
 The API have users, permissions, and allow for full CRUD (Create-Read-Update-Delete)
 functionality. I also explore documentation.
+
+| Image 1                                                                                       | Image 2                                                                                       |
+|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| ![](https://github.com/alcibiadesBustillo/resumen-news-api/blob/master/images_app/image0.png) | ![](https://github.com/alcibiadesBustillo/resumen-news-api/blob/master/images_app/image1.png) |
+
+| Image 3                                                                                       | Image 4                                                                                       |
+|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| ![](https://github.com/alcibiadesBustillo/resumen-news-api/blob/master/images_app/image2.png) | ![](https://github.com/alcibiadesBustillo/resumen-news-api/blob/master/images_app/image3.png) |
+
 
 ## Dependencies
 Python 3
@@ -31,7 +40,7 @@ python manage.py runserver
 
 To feed the News API put the db.sqlite3 database in the root folder of [scrapping_resumen_news]() and run 
 ```python
-    python pipeline.py
+python pipeline.py
 ```
 
 ## Url's
