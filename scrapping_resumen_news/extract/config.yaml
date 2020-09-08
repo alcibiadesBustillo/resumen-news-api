@@ -1,0 +1,8 @@
+news_sites:
+  newyorktimes:
+    url: https://www.nytimes.com/es/
+    url2: https://www.nytimes.com
+    queries:
+      homepage_article_links: 'article h2 a'
+      article_body: '#article-summary'
+      article_title: 'header div h1'
